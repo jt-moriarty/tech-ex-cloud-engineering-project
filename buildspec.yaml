@@ -16,7 +16,7 @@ phases:
   build:
     commands:
        - bridgecrew -d . --bc-api-key $BC_API_KEY --repo-id $CODEBUILD_ACCOUNT_ID/$CODEBUILD_PROJECT --branch master -s
-       - bridgecrew -d . -o junitxml > test_results.xml
+       - bridgecrew -d . -o junitxml > test_results.xml --soft-fail
 reports:
   bridgecrew-infrastructure-security:
     files:
