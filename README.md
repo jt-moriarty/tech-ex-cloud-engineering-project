@@ -17,7 +17,7 @@ https://towardsthecloud.com/validating-cloudformation-templates-in-aws-codepipel
 
 TODO:
 
-1. Recreate pipeline in us-east region with non-bridgecrew demo names that is hooked up to this repository.
+WIP. Recreate pipeline in us-east-1 region with non-bridgecrew demo names that is hooked up to this repository.
 2. Find a sufficiently complex (yet not too complex) CloudFormation template to use for the in-class / recorded demo.
 3. Cut out or modify aws-code-extras script that pulls environment variables that are no longer fully working in AWS CodeBuild.
 4. Add build parameters for skipping specific BridgeCrew checks or soft-failing those checks.
@@ -27,3 +27,5 @@ TODO:
 8. Once non-test version of pipeline is created and confirmed working, disable old pipeline and destory related resources.
 9. Better security for AWS IAM roles for group members.
 10. Add automatic remediation through Bridgecrew console to demo.
+11. Pull pipeline from AWS into repo in some format.
+12. Fix Cloud Formation rollback error in new pipeline.

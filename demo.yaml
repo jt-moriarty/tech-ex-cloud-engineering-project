@@ -4,4 +4,4 @@ Resources:
     Bucket:
         Type: AWS::S3::Bucket
         Properties:
-            BucketName: techex-test-bucket-t5-211025 # unique bucket name
+            BucketName: tech-ex-demo-bucket-t5-211026 # unique bucket name
