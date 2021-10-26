@@ -6,8 +6,9 @@ which performs automated security checks against our CloudFormation template fil
 displaying the results of those tests in the AWS console. 
 The pipeline proceeds with the automated deployment of the CloudFormation stack if those security checks are passed.
 
-The buildspec.yaml file is used as the Buildspec of the AWS CodeBuild Build Project, 
-and the demo.yaml file contains the CloudFormation stack that we wish to test and deploy.
+The buildspec.yaml file is used as the Buildspec of the AWS CodeBuild Build Project. 
+The demo.yaml file contains the CloudFormation stack that we wish to test for security issues and deploy.
+The pipeline.json file is the JSON export of the AWS CodePipeline, retrieved with "aws codepipeline get-pipeline --name tech-ex-project-pipeline" using the Amazon CLI.
 
 Source URLs:
 
@@ -17,14 +18,9 @@ https://towardsthecloud.com/validating-cloudformation-templates-in-aws-codepipel
 
 TODO:
 
-2. Find a sufficiently complex (yet not too complex) CloudFormation template to use for the in-class / recorded demo.
-3. Cut out or modify aws-code-extras script that pulls environment variables that are no longer fully working in AWS CodeBuild.
 4. Add build parameters for skipping specific BridgeCrew checks or soft-failing those checks.
 5. Adjust buildspec.yaml to configure bridgecrew in a way that produces less complaints from Python.
-6. Adjust buildspec.yaml to work with branches that are not named "master".
 7. Have the AWS CodePipeline automatically update the buildspec for the AWS CodeBuild Build Project when a change in buildspec.yaml occurs.
-8. Once non-test version of pipeline is created and confirmed working, disable old pipeline and destory related resources.
+8. Once non-test version of pipeline is created and confirmed working, disable old pipeline and destroy related resources.
 9. Better security for AWS IAM roles for group members.
 10. Add automatic remediation through Bridgecrew console to demo.
-11. Pull pipeline from AWS into repo in some format.
-12. Check that stack update can work with this pipeline.
