@@ -28,7 +28,7 @@ Parameters:
   NamingPrefix:
     Type: String
     Description: The naming prefix for resources created by this template.
-    Default: SimpleApp1
+    Default: DemoApp1
 
   # true/false resource switches
   PublicEnabledParam:
@@ -51,7 +51,7 @@ Parameters:
   S3BucketName:
     Type: String
     Description: The name for the S3 bucket - must be unique across all of AWS (3-63 lowercase letters or numbers)
-    Default: replaceme
+    Default: tech-ex-cloud-engineering-test-bucket-211026
     AllowedPattern: '^[a-z0-9]{3,63}$'
     ConstraintDescription: 3-63 characters; must contain only lowercase letters or numbers
 
@@ -210,6 +210,19 @@ Resources:
       RouteTableId: !Ref InternetRouteTable
       SubnetId: !Ref PublicSubnet1
 
+  ###########
+  # S3 Bucket
+  ###########
+
+  Bucket:
+    Type: AWS::S3::Bucket
+      Properties:
+        BucketName: !Ref S3BucketName
+        Tags:
+        - Key: Name
+          Value: !Join
+            - '-'
+            - - !Ref NamingPrefix
 ###########
 # App Security Group
 ###########
