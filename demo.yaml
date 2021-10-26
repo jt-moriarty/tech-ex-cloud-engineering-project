@@ -216,13 +216,13 @@ Resources:
 
   Bucket:
     Type: AWS::S3::Bucket
-      Properties:
-        BucketName: !Ref S3BucketName
-        Tags:
-        - Key: Name
-          Value: !Join
-            - '-'
-            - - !Ref NamingPrefix
+    Properties:
+      BucketName: !Ref S3BucketName
+      Tags:
+      - Key: Name
+        Value: !Join
+          - '-'
+          - - !Ref NamingPrefix
 ###########
 # App Security Group
 ###########
