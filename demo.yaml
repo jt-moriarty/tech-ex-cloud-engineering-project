@@ -226,6 +226,8 @@ Resources:
 ###########
 # App Security Group
 ###########
+      PublicAccessBlockConfiguration:
+        RestrictPublicBuckets: True
 
   PublicSecurityGroup:
     Type: AWS::EC2::SecurityGroup
