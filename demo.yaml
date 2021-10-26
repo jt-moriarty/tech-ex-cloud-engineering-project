@@ -50,10 +50,10 @@ Parameters:
   # S3 Bucket
   S3BucketName:
     Type: String
-    Description: The name for the S3 bucket - must be unique across all of AWS (3-63 lowercase letters or numbers)
+    Description: The name for the S3 bucket - must be unique across all of AWS (can include numbers, lowercase letters, uppercase letters, and hyphens (-). It cannot start or end with a hyphen (-).)
     Default: tech-ex-cloud-engineering-test-bucket-211026
-    AllowedPattern: '^[a-z0-9]{3,63}$'
-    ConstraintDescription: 3-63 characters; must contain only lowercase letters or numbers
+    AllowedPattern: '^[0-9a-zA-Z]+([0-9a-zA-Z-]*[0-9a-zA-Z])*$'
+    ConstraintDescription: Can include numbers, lowercase letters, uppercase letters, and hyphens (-). It cannot start or end with a hyphen (-).
 
   # IP configuration
   VPCCidrBlock:
