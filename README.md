@@ -26,6 +26,4 @@ TODO:
 4. Add build parameters for skipping specific BridgeCrew checks or soft-failing those checks.
 5. Adjust buildspec.yaml to configure bridgecrew in a way that produces less complaints from Python.
 7. Have the AWS CodePipeline automatically update the buildspec for the AWS CodeBuild Build Project when a change in buildspec.yaml occurs.
-8. Once non-test version of pipeline is created and confirmed working, disable old pipeline and destroy related resources.
 9. Better security for AWS IAM roles for group members.
-10. Add automatic remediation through Bridgecrew console to demo.
