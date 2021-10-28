@@ -51,7 +51,7 @@ Parameters:
   S3BucketName:
     Type: String
     Description: The name for the S3 bucket - must be unique across all of AWS (can include numbers, lowercase letters, uppercase letters, and hyphens (-). It cannot start or end with a hyphen (-).)
-    Default: tech-ex-cloud-engineering-demo4-bucket-211026
+    Default: tech-ex-cloud-engineering-demo5-bucket-211026
     AllowedPattern: '^[0-9a-zA-Z]+([0-9a-zA-Z-]*[0-9a-zA-Z])*$'
     ConstraintDescription: Can include numbers, lowercase letters, uppercase letters, and hyphens (-). It cannot start or end with a hyphen (-).
 
